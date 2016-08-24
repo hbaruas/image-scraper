@@ -8,8 +8,8 @@ class ImgurSpider(CrawlSpider):
 
 
     name='imgur'
-    allowed_domains=['facebook.com']
-    start_urls=['https://www.facebook.com/saurabh.baliyan.1']
+    allowed_domains=['http://imgur.com/']
+    start_urls=['http://imgur.com/']
     rules=[Rule(LinkExtractor(allow=['/gallery/.*']),'parse_imgur')]
     
     def parse_imgur(self,response):
